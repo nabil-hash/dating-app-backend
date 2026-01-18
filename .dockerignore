@@ -1,0 +1,16 @@
+.git/
+.gitignore
+node_modules/
+npm-debug.log
+yarn-error.log
+storage/*.key
+.env
+.env.local
+.env.test
+.env.production
+docker-compose.yml
+Dockerfile
+.dockerignore
+README.md
+.phpunit.result.cache
+.php_cs.cache
