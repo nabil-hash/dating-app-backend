@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ['php82', 'php82Packages.composer']
+
+[phases.build]
+cmds = ['composer install --no-dev --optimize-autoloader']
+
+[phases.deploy]
+cmd = 'php artisan config:cache && php artisan route:cache && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=$PORT'
+
+[start]
+cmd = 'php artisan serve --host=0.0.0.0 --port=$PORT'
